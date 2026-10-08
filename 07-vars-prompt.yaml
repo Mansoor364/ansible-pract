@@ -6,7 +6,7 @@
     private: false            #not confidential prompt
   - name: DURATION
     prompt: please enter course duration
-  - name: Trainer
+  - name: TRAINER
     prompt: please enter trainer name
   tasks:
   - name: variables prompt from user
