@@ -1,0 +1,13 @@
+- name: vars priority
+  hosts: web
+  vars:
+    COURSE: Devops
+  vars_files:
+  - vars.yaml
+  vars_prompt:
+  - name: COURSE
+    prompt: Please enter course name
+  tasks:
+  - name: print variables priority
+    ansible.builtin.debug:
+      msg: "Hi Iam learning: {{COURSE}}"
