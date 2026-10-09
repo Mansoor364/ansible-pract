@@ -6,6 +6,7 @@
     ansible.builtin.package:     #package is module 
       name: nginx                #name is mandatry parameter -name of package
       state: present             #state can be present to install, absent to uninstall
+      
   - name: run nginx
     ansible.builtin.service:     #service is module in ansible
       name: nginx
