@@ -1,14 +1,13 @@
 - name: install nginx and run
-  hosts: web
-  become: yes
-  tasks: 
+  hosts: web #list of ip address of nodes
+  become: yes    #take sudo access
+  tasks:    #list of tasks to be performed in play
   - name: install nginx
-    ansible.builtin.package:
-     name: nginx
-     state: present
+    ansible.builtin.package:     #package is module 
+      name: nginx                #name is mandatry parameter -name of package
+      state: present             #state can be present to install, absent to uninstall
   - name: run nginx
-    ansible.builtin.service:
+    ansible.builtin.service:     #service is module in ansible
       name: nginx
-      state: started
-      enabled: yes
-      
+      state: started             #state of service cane be started, stopped, restarted,
+      enabled: yes               #enabled: yes to enable service
