@@ -10,7 +10,7 @@
 - name: PLAY-02
   hosts: web
   tasks: #list of tasks in this play
-  - name: PLAY-02 TASK-02
+  - name: PLAY-02 TASK-01
     ansible.builtin.debug:
       msg: "This is from PLAY-02 TASK-01"
 
@@ -21,4 +21,4 @@
   - name: PLAY-03 TASK-01
     ansible.builtin.debug:
       msg: "This is from PLAY-03 TASK-01"
-      
+
