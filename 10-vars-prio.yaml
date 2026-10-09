@@ -4,9 +4,9 @@
     COURSE: Devops
   vars_files:
   - vars.yaml
-  vars_prompt:
-  - name: COURSE
-    prompt: Please enter course name
+  #5vars_prompt:
+  #- name: COURSE
+    #prompt: Please enter course name
   tasks:
   - name: print variables priority
     vars:
