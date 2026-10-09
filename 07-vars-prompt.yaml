@@ -1,15 +1,17 @@
-- name: variables from prompt
+- name: vars from prompt
   hosts: web
   vars_prompt:
   - name: COURSE
-    prompt: please enter Course name
-    private: false            #not confidential prompt
-  - name: DURATION
-    prompt: please enter course duration
+    prompt: Please enter course name
+    private: false
   - name: TRAINER
-    prompt: please enter trainer name
+    prompt: Please enter trainer name
+    private: false
+  - name: DURATION
+    prompt: please enter duration time
+    private: false
   tasks:
-  - name: variables prompt from user
+  - name: print vars from prompt
     ansible.builtin.debug:
-      msg: "Hi, I'm Learning {{COURSE}}, From Trainer:{{TRAINER}}, Duration:{{DURATION}}"
-
+      msg: "Hi, I'm learning {{COURSE}}, From Trainer:{{TRAINER}}, Duration:{{DURATION}}"
+      
