@@ -10,6 +10,15 @@
   tasks:
   - name: print variables priority
     vars:
-      COURSE: TASK-level
+   #2   COURSE: TASK-level
     ansible.builtin.debug:
       msg: "Hi Iam learning: {{COURSE}}"
+
+
+#priority order
+#1-vars passed as args
+#2-vars declared at task-level
+#3-vars from file
+#4-vars from prompt
+#5-vars from play-level
+#6-vars from inventory
