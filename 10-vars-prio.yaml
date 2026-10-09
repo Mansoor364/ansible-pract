@@ -1,7 +1,7 @@
 - name: vars priority
   hosts: web
-  vars:
-    COURSE: Devops
+  #5vars:
+    #COURSE: Devops
   vars_files:
   - vars.yaml
   #5vars_prompt:
