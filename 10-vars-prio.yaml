@@ -1,24 +1,24 @@
 - name: vars priority
   hosts: web
-  #5vars:
-    #COURSE: Devops
+  vars:
+    COURSE: "PLAY-LEVEL-VAR"
   vars_files:
   - vars.yaml
-  #5vars_prompt:
-  #- name: COURSE
-    #prompt: Please enter course name
+  vars_prompt:
+  - name: COURSE
+    prompt: please enter course name
   tasks:
-  - name: print variables priority
+  - name: print variables on preference
     vars:
-   #2   COURSE: TASK-level
+      COURSE: "TASK-LEVEL-VAR"
     ansible.builtin.debug:
-      msg: "Hi Iam learning: {{COURSE}}"
+      msg: "Hi, I'm learning: {{ COURSE }}"
 
 
-#priority order
-#1-vars passed as args
-#2-vars declared at task-level
-#3-vars from file
-#4-vars from prompt
-#5-vars from play-level
-#6-vars from inventory
+#variable printing priority or preference is 
+#1)vars passed as arguments on terminal
+#2)vars at task level 
+#3)vars from file
+#4)vars passed as prompt
+#5)vars at play level
+#6)vars in inventory file
