@@ -1,13 +1,10 @@
 - name: variables to print
   hosts: web
   vars:
-    COURSE: "DEVOPS with AWS"
-    TRAINER: "Mansoor"
-    DURATION: "120 Hours"
-  tasks: 
-  - name: print the information
+    COURSE: "Devops With AWS"
+    TRAINER: "Siva Kumar"
+    DURATION: "120 HOURS"
+  tasks:
+  - name: print the variable- play level
     ansible.builtin.debug:
-      msg: "Hi, I'm Learning {{COURSE}}, from Trainer:{{TRAINER}}, Duration:{{DURATION}}"
-      
-
-      
+      msg: "Hi, I'm learning course: {{ COURSE }}, from Trainer: {{ TRAINER }}, Duration: {{ DURATION }}"
