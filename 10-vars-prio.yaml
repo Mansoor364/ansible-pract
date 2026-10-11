@@ -4,10 +4,10 @@
     COURSE: "PLAY-LEVEL-VAR"
   vars_files:
   - vars.yaml
-  vars_prompt:
-  - name: COURSE
-    prompt: please enter course name
-    private: false
+  #vars_prompt:
+  #- name: COURSE
+    #prompt: please enter course name
+    #private: false
   tasks:
   - name: print variables on preference
     #vars:
