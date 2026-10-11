@@ -1,7 +1,7 @@
 - name: vars priority
   hosts: web
-  vars:
-    COURSE: "PLAY-LEVEL-VAR"
+  #vars:
+    #COURSE: "PLAY-LEVEL-VAR"
   vars_files:
   - vars.yaml
   #vars_prompt:
