@@ -16,7 +16,7 @@
     when: number | int >= 10
 
 #play-2 play-level
-- name: number is less tahn or greater tahn equal to 10
+- name: number is less than or greater than equal to 10
   hosts: local
   connection: local
   vars:
