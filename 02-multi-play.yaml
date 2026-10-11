@@ -1,24 +1,23 @@
-#PLAY-01
+#play-01
 - name: PLAY-01
   hosts: web
-  tasks: #list of tasks
-  - name: PLAY01 TASK-01
-    ansible.builtin.debug:
-      msg: "This is from PLAY-01 TASK-01"
+  tasks: #list of tasks 
+  - name: PLAY-01 TASk-01
+    ansible.builtin.debug:              #print module
+      msg: "This is from PLAY-01 TASK-01"  #msg is mandatory parameter
 
-#PLAY-02
+#play-02
 - name: PLAY-02
   hosts: web
-  tasks: #list of tasks in this play
+  tasks: #list of tasks to be performed in play
   - name: PLAY-02 TASK-01
     ansible.builtin.debug:
       msg: "This is from PLAY-02 TASK-01"
 
-#PLAY-03
+#play-03
 - name: PLAY-03
   hosts: web
-  tasks: #list of tasks in play
+  tasks: 
   - name: PLAY-03 TASK-01
     ansible.builtin.debug:
       msg: "This is from PLAY-03 TASK-01"
-
