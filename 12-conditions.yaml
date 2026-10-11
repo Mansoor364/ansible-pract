@@ -1,0 +1,33 @@
+- name: number is less than or greater than 10
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: number
+    prompt: please enter a number
+    private: false
+  tasks:
+  - name: if number less than 10
+    ansible.builtin.debug:
+      msg: "Entered number:{{ number }}, is less than 10"
+    when: number | int < 10
+  - name: if number greater than 10
+    ansible.builtin.debug:
+      msg: "entered number: {{ number }}, is greater than or eq to 10"
+    when: number | int >= 10
+
+#play-2 play-level
+- name: number is less tahn or greater tahn equal to 10
+  hosts: local
+  connection: local
+  vars:
+    number: 130
+  tasks: 
+  - name: if number less than 10
+    ansible.builtin.debug:
+      msg: " Given number:{{ number }} is less than 10"
+    when: number < 10
+  - name: if number greater than 10
+    ansible.builtin.debug:
+      msg: "Given number:{{ number }}, is greater than 10"
+    when: number >= 10
+    
