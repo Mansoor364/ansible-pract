@@ -1,5 +1,6 @@
 - name: install nginx and run
   hosts: web
+  become: yes
   tasks: #list of tasks to be performed in this play
   - name: install nginx
     ansible.builtin.package:
@@ -9,3 +10,4 @@
     ansible.builtin.service:
       name: nginx             #service name: nginx 
       state: started    #state can be started, stopped, restarted, reloaded 
+      enabled: yes
