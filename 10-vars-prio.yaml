@@ -10,8 +10,8 @@
     private: false
   tasks:
   - name: print variables on preference
-    vars:
-      COURSE: "TASK-LEVEL-VAR"
+    #vars:
+      #COURSE: "TASK-LEVEL-VAR"
     ansible.builtin.debug:
       msg: "Hi, I'm learning: {{ COURSE }}"
 
