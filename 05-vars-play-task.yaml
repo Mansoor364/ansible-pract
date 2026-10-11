@@ -1,20 +1,17 @@
-- name: Variables type play tasks
+- name: play-level and task-level variables
   hosts: web
-  vars: #play level vars can be accessed in all task of this play
-    COURSE: "Devops With AWS"
+  vars:
+    COURSE: "DEVOPS"
     TRAINER: "Siva Kumar"
     DURATION: "120 Hours"
   tasks:
-  - name: print play level variables
-    ansible.builtin.debug:
-      msg: "Hi, I'm learning {{COURSE}}, From {{TRAINER}}, Duration:{{DURATION}}"
-
-  - name: print task level variables
+  - name: Print the task vars info
     vars:
-      COURSE: "Ansible"   #task level vars 
+      COURSE: "ANSIBLE" #task level var can override play levl var
     ansible.builtin.debug:
-      msg: "Hi, I'm Learning {{COURSE}}, From Trainer:{{TRAINER}}, Duration:{{DURATION}}"
+      msg: "Hi, I'm Learning course:{{ COURSE }}, from trainer: {{ TRAINER }}, Duration: {{ DURATION }}"
 
-  - name: print play level vars again
+  - name: Print the play-level vars 
     ansible.builtin.debug:
-      msg: "Hi, I'm Learning {{COURSE}} from {{TRAINER}}, Duration:{{DURATION}}"
+      msg: "Hi, I'm Learning Course: {{ COURSE }}, from trainer: {{ TRAINER }}, Duration: {{ DURATION }}"
+      
