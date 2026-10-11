@@ -3,8 +3,9 @@
   become: yes
   tasks:
   - name: gather facts
-    ansibe.builtin.debug:
+    ansible.builtin.debug:
       msg: "facts are: {{ ansible_facts }}"
+
   - name: install nginx if os is redhat
     ansible.builtin.dnf:
       name: nginx
